@@ -1,0 +1,55 @@
+#page
+{
+    margin:0 150px 0 150px;
+    padding: 10px 10px;
+    border:5px solid beige;
+    height:1000px;
+}
+#lp3
+{
+    margin: auto;
+    height: 150px;
+    width: 49%;
+    border:1px dashed grey;
+    float:left;
+}
+#hd
+{
+    margin: auto;
+    height: 150px;
+    width: 49%;
+    border:1px dashed grey;
+    float:right;
+}
+.header
+{
+    margin: auto;
+    height: auto;
+    border:1px dashed grey;
+    text-align:center;
+}
+.header1
+{
+    margin: auto;
+    height: auto;
+    border:1px dashed grey;
+    clear: both;
+}
+#left
+{
+    margin: 10px 0;
+    border:1px solid grey;
+    height :auto;
+    width:49.8%;
+    float:left;
+    font-size: 20px;
+}
+#right
+{
+    margin: 10px 0;
+    border:1px solid grey;
+    height :auto;
+    width:49.8%;
+    float:right;
+    font-size: 20px;
+}

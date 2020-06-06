@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="static/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="page">
+            <div id="left">
+                <h1>互动QA</h1>
+                <div class="header">
+                    <div id="lp3">
+                        <div style="font-size: 20px;line-height: 100%;float: left">
+                            <p>删除LP3会员信息</p>
+                        </div>
+                        <div style="font-size: 20px;line-height: 100%;float: left">
+                            <form method="get" action=''>
+                                <label>lp3_id：<input type="text" name="lp3_id" value=""></label><br>
+                                <input type="submit" value="删除" formaction="/clear_lp3">
+                            </form>
+                        </div>
+                    </div>
+                    <div id="hd">
+                        <div style="font-size: 20px;line-height: 100%;float: left">
+                            <p>删除互动赢家用户信息</p>
+                        </div>
+                        <div style="font-size: 20px;line-height: 100%;float: left">
+                            <form method="get" >
+                                <label>手机号：<input type="text" name="phone" value=""></label><br>
+                                <label>nick：<input type="text" name="nick" value=""></label><br>
+                                <input type="submit" value="删除" formaction="/hd_user_db">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header1">
+                        <div style="font-size: 20px;line-height: 100%;float: left">
+                            <p>查询</p>
+                        </div>
+                        <div style="font-size: 20px;line-height: 100%;clear: both">
+                            <form method="get">
+                                <label>nick：<input type="text" name="nick" value=""></label><br>
+                                <button type="submit" formaction='/select'>查询</button>
+                            </form>
+                            <p style="text-align: center;font-size: small">{{ content }}{{ result }}</p>
+                        </div>
+                    </div>
+                    <div style="border:1px solid grey;height: 200px;width: auto">
+                        <div style="font-size: 20px;line-height: 100%;float: left">
+                            <p>清除互动数据</p>
+                        </div>
+                        <div style="font-size: 20px;line-height: 100%;clear: both">
+                            <form method="get">
+                                <div style="display: block;margin:5px 0;">
+                                    <label>请输入nick：</label>
+                                    <input type="text" name="nick" value="">
+                                </div>
+                                <div style="display: block;margin:5px 0;">
+                                    <label>选择互动类型：</label>
+                                    <select name="ac_type">
+                                        <option>选择互动类型</option>
+{#                                        <option value ="FAVORITE">关注店铺</option>#}
+                                        <option value ="MEMBERSHIP_CARD">领卡有礼</option>
+{#                                        <option value="SIGN">连续签到</option>#}
+                                        <option value="INVITE_MEMBERSHIP">新邀请领卡</option>
+                                    </select><br>
+                                </div>
+                                <div style="display: block;margin:5px 0;">
+                                    <label>选择店铺：</label>
+                                    <select name="shop_id">
+                                        <option>选择店铺</option>
+                                        <option value ="106878997">数云食堂</option>
+                                        <option value ="122564515">羽释黑点</option>
+                                        <option value="104350109">陕南农伯伯</option>
+                                    </select><br>
+                                </div>
+                                <div>
+                                    <input type="submit" value="删除数据" formaction='/clear'>
+{#                                    <input type="submit" value="清除redis">#}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{#            <div id="right">#}
+{#                <h1>生产（暂未使用）</h1>#}
+{#                <div class="header">#}
+{#                    <p>查询</p>#}
+{#                    <form method="get">#}
+{#                        <label>nick：<input type="text" name="nick" value=""></label><br>#}
+{#                        <input type="submit" value="查询">#}
+{#                    </form>#}
+{#                </div>#}
+{#            </div>#}
+        </div>
+    </body>
+</html>
